@@ -43,7 +43,8 @@ a{
     margin-bottom: 20px;
     text-align:center;
     color: white;
-    background: url("public_html/img/1.jpg") no-repeat center;
+    background-image: url("public_html/img/1.jpg");
+    background-repeat: no-repeat center;
     background-size: cover;
 }
 .inner-banner-image{
