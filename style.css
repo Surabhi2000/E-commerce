@@ -3,6 +3,7 @@ body{
     height:100%;
     margin:0;
 }
+
 a{
     text-decoration:none;
     background-color:transparent;
@@ -16,42 +17,60 @@ a{
     min-height:50px;
     border:1px solid transparent;   
 }
+
 .inner-header{
     width:80%;
     margin:auto;
 }
-.logo{
+
+.logo a{
     float: left;
+    color: #fff;
     height: 50px;
     padding:15px;
     font-size:20px;
     font-weight: bold;
 }
-.header-link{
+
+.logo a:hover{
+    color: beige;
+    text-decoration: none;
+}
+
+.header-link a{
+    color: #fff;
     float:right;
-    font-size:14px;
+    font-size:12px;
     height:50px;
     padding: 15px 15px;
     font-size:16px;
     font-weight: bold;
 }
+
+.header-link:hover a{
+    text-decoration: none;
+    color: beige;
+}
+
 .content{
     min-height: 600px;
 }
+
 .banner-image{
     padding-bottom: 50px;
     margin-bottom: 20px;
     text-align:center;
     color: white;
-    background-image: url("public_html/img/1.jpg");
-    background-repeat: no-repeat center;
+    background: url("../img/1.jpg") no-repeat center;
     background-size: cover;
 }
+
 .inner-banner-image{
     padding-top: 12%;
     width:80%;
     margin:auto;
 }
+
 .banner_content{
     position:relative;
     padding-top: 6%;
@@ -59,9 +78,10 @@ a{
     overflow: hidden;
     margin-bottom: 12%;
     background-color: rgba(0,0,0,0.7);
-    max-width: 660px;
-     margin-left: 200px;
+    max-width: 680px;
+    margin-left: 200px;
 }
+
 .button{
     color:#fff;
     background-color: #c9302c;
@@ -70,14 +90,25 @@ a{
     padding:10px 16px;
     font-size: 18px;
     border-radius: 6px;
+    cursor: pointer;
 }
+
+.button:hover{
+    transform: translateY(10%);
+}
+
 .container{
     width: 90%;
     margin: auto;
     overflow: hidden;
+    justify-content: center;
+    text-align: center;
+    display: flex;
 }
+
 .items{
     width: 30%;
+    height: 300px;
     display: block;
     padding: 4px;
     margin-bottom: 20px;
@@ -86,19 +117,24 @@ a{
     border:1px solid #ddd;
     border-radius: 4px;
     float: left;
-    margin-left: 1%;
+    margin-left: 10px;
 }
+
 .thumbnail{
     display: block;
     max-width: 100%;
     height: auto;
 }
+
 .caption{
     color: black;
     padding: 0px 10px 10px;
     font-weight: normal;
     text-align: center;
+    font-size: medium;
+    text-decoration: none;
 }
+
 .footer{
     text-align: center;
     background-color: black;
@@ -106,3 +142,32 @@ a{
     font-size: 14px;
 }
 
+@media (max-width:400px){
+    .logo{
+        font-size: 12px;
+    }
+
+    .header-link a{
+        font-size: 12px;
+    }
+
+    .banner_content{
+        margin: 4px;
+        width: auto;
+    }
+
+    .container{
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+        justify-content: center;
+        display: block;
+    }
+
+    .items{
+        width: 100%;
+        height: 300px;
+        display: block;
+        margin: auto;
+    }
+}
